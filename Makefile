@@ -1,4 +1,6 @@
 # Makefile. To test Git
+.PHONY: build test lint
+
 install:
 	@echo "Installing requirements..."
 	pip install --upgrade pip &&\
@@ -8,7 +10,7 @@ build:
 	@echo "Building the project..."
 	# Example build command:
 	python setup.py install
-	
+
 format:
 	@echo "formating..."
 	black *.py
