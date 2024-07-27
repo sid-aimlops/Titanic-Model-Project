@@ -26,20 +26,17 @@ jobs:
     - name: List root directory
       run: ls -al
 
-    - name: List PROJECT_WITH_TEST directory
-      run: ls -al PROJECT_WITH_TEST
-
     - name: List requirements directory
-      run: ls -al PROJECT_WITH_TEST/requirements
+      run: ls -al requirements
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r PROJECT_WITH_TEST/requirements/test_requirements.txt
+        pip install -r requirements/test_requirements.txt
 
     - name: Train pipeline
       run: |
-        python PROJECT_WITH_TEST/titanic_model/train_pipeline.py
+        python titanic_model/train_pipeline.py
 
     - name: Test with pytest
       run: |
