@@ -1,4 +1,4 @@
-# Makefile
+# Makefile. To test Git
 install:
 	@echo "Installing requirements..."
 	pip install --upgrade pip &&\
