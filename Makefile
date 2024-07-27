@@ -3,6 +3,12 @@ install:
 	@echo "Installing requirements..."
 	pip install --upgrade pip &&\
 		pip install -r requirements/requirements.txt
+
+build:
+	@echo "Building the project..."
+	# Example build command:
+	python setup.py install
+	
 format:
 	@echo "formating..."
 	black *.py
